@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://bydgq1bvyaibu"]
 
-[ext_resource type="Texture2D" uid="uid://73uplsmbq4aq" path="res://art/playerGrey_up1.png" id="1_hqtel"]
 [ext_resource type="Script" uid="uid://03iu6ae8wk8h" path="res://playerV2.gd" id="1_sweqy"]
 [ext_resource type="Texture2D" uid="uid://tniuvb0g8yvv" path="res://art/playerGrey_up2.png" id="2_sweqy"]
 [ext_resource type="Texture2D" uid="uid://dwr2ia4n6wusn" path="res://art/playerGrey_walk1.png" id="3_2hs0m"]
@@ -9,9 +8,6 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_myki8"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_hqtel")
-}, {
 "duration": 1.0,
 "texture": ExtResource("2_sweqy")
 }],
@@ -42,7 +38,7 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=832422087]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_myki8")
-animation = &"up"
+animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=193188293]
 shape = SubResource("CapsuleShape2D_myki8")

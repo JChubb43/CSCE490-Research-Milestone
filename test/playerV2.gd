@@ -2,7 +2,7 @@ extends CharacterBody2D
 signal hit
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -800.0
 
 var screen_size
 
@@ -26,7 +26,22 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
+	# playing animation
+	if velocity.x != 0:
+		$AnimatedSprite2D.animation = "walk"
+		$AnimatedSprite2D.flip_h = velocity.x < 0
+	if velocity.y < 0:
+		$AnimatedSprite2D.animation = "up"
+		
+	if velocity.length() > 0:
+		$AnimatedSprite2D.play()
+	else:
+		$AnimatedSprite2D.stop()
+
 	move_and_slide()
+	
+	#keeps the player from walking off screen
+	position = position.clamp(Vector2.ZERO, screen_size)
 	
 	# detect collisions
 	for i in range(get_slide_collision_count()):
