@@ -1,6 +1,6 @@
-# CSCE490-Research-Milestone
+# CSCE490 Research Milestone
 
-Link to the video:  
+Link to the video: https://youtu.be/zM1nMY35Ghs  
 
 Link to Itch.io Deployment: https://jchubb43.itch.io/csce490-research-game  
 Password: Research
@@ -11,3 +11,6 @@ Used https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.
 - Separate collision interactions for enemies and the floor  
 
 Then deployed on Itch.io
+
+https://github.com/user-attachments/assets/5619cab6-d878-4c96-ad82-f3ef6d2ce7f8
+
